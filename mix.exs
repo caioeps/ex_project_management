@@ -33,8 +33,12 @@ defmodule ExProjectManagement.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:bcrypt_elixir, "~> 1.0"},
+      {:comeonin, "~> 4.0"},
       {:cors_plug, "~> 1.2"},
       {:cowboy, "~> 1.0"},
+      {:ex_machina, "~> 2.1"},
+      {:guardian, "~> 1.0-beta"},
       {:gettext, "~> 0.11"},
       {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},
