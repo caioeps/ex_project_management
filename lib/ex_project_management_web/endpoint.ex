@@ -38,6 +38,8 @@ defmodule ExProjectManagementWeb.Endpoint do
     key: "_ex_project_management_key",
     signing_salt: "9aueUrl0"
 
+  plug CORSPlug
+
   plug ExProjectManagementWeb.Router
 
   @doc """
