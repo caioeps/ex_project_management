@@ -4,7 +4,7 @@ defmodule ExProjectManagement.Accounts.User do
   alias ExProjectManagement.Accounts.User
 
 
-  schema "user" do
+  schema "users" do
     field :email, :string
     field :name, :string
     field :password_hash, :string
@@ -17,6 +17,5 @@ defmodule ExProjectManagement.Accounts.User do
   def changeset(%User{} = user, attrs) do
     user
     |> cast(attrs, [:name, :email, :password_hash, :username])
-    |> validate_required([:name, :email, :password_hash, :username])
   end
 end

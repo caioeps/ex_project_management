@@ -20,12 +20,17 @@ defmodule ExProjectManagement.Mixfile do
   def application do
     [
       mod: {ExProjectManagement.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [
+        :comeonin,
+        :ex_machina,
+        :logger,
+        :runtime_tools
+      ]
     ]
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(:test), do: ["lib", "web", "test/support"]
   defp elixirc_paths(_),     do: ["lib"]
 
   # Specifies your project dependencies.

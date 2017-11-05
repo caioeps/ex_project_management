@@ -23,6 +23,8 @@ defmodule ExProjectManagementWeb.ConnCase do
 
       # The default endpoint for testing
       @endpoint ExProjectManagementWeb.Endpoint
+
+      import ExProjectManagement.Factory
     end
   end
 

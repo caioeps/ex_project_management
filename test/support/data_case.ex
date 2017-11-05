@@ -22,6 +22,8 @@ defmodule ExProjectManagement.DataCase do
       import Ecto.Changeset
       import Ecto.Query
       import ExProjectManagement.DataCase
+
+      import ExProjectManagement.Factory
     end
   end
 

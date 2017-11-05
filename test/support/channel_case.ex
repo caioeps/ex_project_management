@@ -20,6 +20,8 @@ defmodule ExProjectManagementWeb.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
+      import ExProjectManagement.Factory
+
       # The default endpoint for testing
       @endpoint ExProjectManagementWeb.Endpoint
     end

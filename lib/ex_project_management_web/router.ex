@@ -24,5 +24,9 @@ defmodule ExProjectManagementWeb.Router do
     pipe_through :api
 
     resources "/users", UserController, except: [:new, :edit]
+
+    scope "/accounts", as: :accounts do
+      resources "/registration", Accounts.RegistrationController, only: [:create, :show, :update, :delete]
+    end
   end
 end

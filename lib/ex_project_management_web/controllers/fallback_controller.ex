@@ -15,6 +15,18 @@ defmodule ExProjectManagementWeb.FallbackController do
   def call(conn, {:error, :not_found}) do
     conn
     |> put_status(:not_found)
-    |> render(ExProjectManagementWeb.ErrorView, :"404")
+    |> render(ExProjectManagementWeb.ErrorView, :"404.json")
+  end
+
+  def call(conn, nil) do
+    conn
+    |> put_status(404)
+    |> render(ExProjectManagementWeb.ErrorView, :"404.json")
+  end
+
+  def call(conn, {:error, :unauthorized}) do
+    conn
+    |> put_status(401)
+    |> render(ExProjectManagementWeb.ErrorView, :"401.json")
   end
 end
