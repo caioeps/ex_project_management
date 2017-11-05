@@ -23,10 +23,10 @@ defmodule ExProjectManagementWeb.Router do
   scope "/api", ExProjectManagementWeb do
     pipe_through :api
 
-    resources "/users", UserController, except: [:new, :edit]
+    resources "/users", UserController, only: [:index, :update, :delete]
 
     scope "/accounts", as: :accounts do
-      resources "/registration", Accounts.RegistrationController, only: [:create, :show, :update, :delete]
+      resources "/registration", Accounts.RegistrationController, only: [:create]
     end
   end
 end
