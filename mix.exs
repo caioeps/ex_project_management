@@ -50,7 +50,8 @@ defmodule ExProjectManagement.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:postgrex, ">= 0.0.0"}
+      {:postgrex, ">= 0.0.0"},
+      {:secure_random, "~> 0.5"}
     ]
   end
 

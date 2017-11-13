@@ -3,7 +3,6 @@ defmodule ExProjectManagementWeb.UserController do
 
   alias ExProjectManagement.Accounts
   alias ExProjectManagement.Accounts.User
-  alias ExProjectManagement.Accounts.Registration
 
   action_fallback ExProjectManagementWeb.FallbackController
 
