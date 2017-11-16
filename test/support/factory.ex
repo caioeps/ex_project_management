@@ -18,5 +18,12 @@ defmodule ExProjectManagement.Factory do
       password_confirmation: "123456789"
     }
   end
+
+  def session_factory do
+    %Accounts.Session{
+      user: build(:user),
+      token: '123456789'
+    }
+  end
 end
 

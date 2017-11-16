@@ -49,13 +49,16 @@ defmodule ExProjectManagement.Accounts.Session do
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_session(%{"email" => email, "password" => password}) do
+  def create_session(%{"email" => email, "password" => password} = attrs) do
     user = Repo.get_by!(User, email: email)
 
     %Session{}
     |> Session.changeset(attrs)
+    |> case do
+         when %{valid?: true}
+       end
     |> put_change(:token, SecureRandom.urlsafe_base64())
-    |> put_change(:user_id, attrs["user_id"])
+    |> put_change(:user_id, user.id)
     |> Repo.insert()
   end
 

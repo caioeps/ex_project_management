@@ -27,6 +27,7 @@ defmodule ExProjectManagementWeb.Router do
 
     scope "/accounts", as: :accounts do
       resources "/registration", Accounts.RegistrationController, only: [:create]
+      resources "/session", Accounts.SessionController, only: [:create, :delete]
     end
   end
 end
